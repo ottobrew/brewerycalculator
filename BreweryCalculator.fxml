@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CalcController">
+   <children>
+      <Label layoutX="67.0" layoutY="39.0" text="Brewery Calculator" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+      </Label>
+      <Slider fx:id="barrelsSlider" layoutX="98.0" layoutY="158.0" majorTickUnit="20.0" max="60.0" onDragDetected="#onSlideBarrels" onMouseClicked="#onClickBbls" onMouseReleased="#onMouseRelBbls" onTouchPressed="#onTouchBarrels" showTickLabels="true" value="60.0" />
+      <Slider fx:id="halfKegsSlider" blockIncrement="8.0" layoutX="43.0" layoutY="282.0" majorTickUnit="8.0" minorTickCount="4" onDragDetected="#onSlideHalfs" onMouseClicked="#onClickHalfs" onMouseReleased="#onMouseRelHalfs" orientation="VERTICAL" snapToTicks="true" />
+      <Slider fx:id="sixtelSlider" blockIncrement="20.0" layoutX="163.0" layoutY="282.0" majorTickUnit="20.0" minorTickCount="4" onDragDetected="#onSlideSixtels" onMouseClicked="#onClickSixtels" onMouseReleased="#onMouseRelSixtels" orientation="VERTICAL" snapToTicks="true" />
+      <Slider fx:id="cansSlider" disable="true" layoutX="278.0" layoutY="282.0" onDragDetected="#onSlideCans" orientation="VERTICAL" />
+      <Label layoutX="117.0" layoutY="100.0" text="Yield in Barrels" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="216.0" text="1/2 Kegs" />
+      <Label layoutX="141.0" layoutY="216.0" text="1/6 Kegs" />
+      <Label layoutX="251.0" layoutY="216.0" text="12oz Cans" />
+      <TextField fx:id="halfKegsTxtFld" layoutX="27.0" layoutY="459.0" onKeyReleased="#onEnterHalfs" prefHeight="26.0" prefWidth="47.0" />
+      <TextField fx:id="sixtelTxtFld" layoutX="147.0" layoutY="459.0" onKeyReleased="#onEnterSixtels" prefHeight="26.0" prefWidth="47.0" />
+      <TextField fx:id="cansTxtFld" disable="true" layoutX="255.0" layoutY="459.0" onKeyReleased="#onEnterCans" prefHeight="27.0" prefWidth="64.0">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font></TextField>
+      <TextField fx:id="barrelsTxtFld" layoutX="144.0" layoutY="124.0" onKeyReleased="#onEnterBarrels" prefHeight="26.0" prefWidth="47.0" promptText="bbl" />
+      <Label layoutX="80.0" layoutY="157.0" text="0" />
+      <Label layoutX="46.0" layoutY="431.0" text="0" />
+      <Label layoutX="166.0" layoutY="431.0" text="0" />
+      <Label layoutX="281.0" layoutY="431.0" text="0" />
+      <Label layoutX="242.0" layoutY="157.0" text="60 bbl" />
+      <Label fx:id="halfsMax" layoutX="42.0" layoutY="265.0" text="48" />
+      <Label fx:id="sixtelsMax" layoutX="159.0" layoutY="265.0" text="100" />
+      <Label fx:id="cansMax" layoutX="263.0" layoutY="265.0" text="20,000" />
+      <Label fx:id="availGalLabel" layoutX="73.0" layoutY="524.0" text="Available Gallons: ">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
